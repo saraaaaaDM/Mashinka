@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mashinka</title>
+  <link rel="icon" href="./images/page.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+ <header class="navbar">
+  <div class="container">
+    <a href="#home" class="logo">
+      <img src="./images/page.png" alt="Logo Mashinka" class="logo-img" />
+    </a>
+
+    <button class="hamburger" aria-label="Menu">
+      ☰
+    </button>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="apropos.html">A propos</a></li>
+        <li><a href="tatouages.html">Tatouages</a></li>
+        <li><a href="piercings.html">Piercings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <section id="home" class="hero">
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="./images/Marie & David I Salon de tatouage Herblay - Mai 2023.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <div class="grid">
+        <a href="tatouages.html" class="card-link">
+          <div class="card tatouages">
+            <h3>Tatouages</h3>
+          </div>
+        </a>
+        <a href="piercings.html" class="card-link">
+          <div class="card piercings">
+            <h3>Piercings</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mashinka. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'StrangeDreams';
+  src: url('./font/strangedreams.ttf') format('truetype');
+}
+
+body {
+  background-color: #000;
+  font-family: 'StrangeDreams', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/*NAVBAR*/
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #24242c, #2b2f35);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.6s ease;
+}
+.navbar .logo-img {
+  width: auto;
+  height: 90px;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  font-size: 1rem;
+}
+.navbar span{
+    font-style: italic;
+}
+.hamburger {
+  justify-content: end;  
+  display: none;
+  font-size: 4rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+   .hamburger {
+    display: block;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+   .main-nav ul {
+    position: fixed; 
+    top: 95px; 
+    left: 0;
+    width: 100vw; 
+    margin: 0; 
+    padding: 2rem 0;
+    background: rgba(36, 36, 44, 0.95);
+    backdrop-filter: blur(3px);
+    display: none;
+    flex-direction: column;
+    z-index: 1500; 
+  }
+
+  .main-nav ul.active {
+    display: flex;
+  }
+
+  .main-nav ul li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .navbar .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .portfolio .grid {
+    flex-direction: column !important;
+    gap: 3rem !important;
+   
+  }
+
+}
+
+/*HERO VIDEO*/
+.hero {
+  padding: 0.1px 0;
+}
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.video-background .contenu {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/*CARTES ACCUEIL*/
+.portfolio .grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  flex-wrap: wrap;
+  min-height: 30vh; 
+
+}
+.card {
+  padding: 2rem;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, background-color 0.4s ease, color 0.4s ease, border 0.3s ease;
+  z-index: 1;
+  color: #333;
+  border: 4px solid transparent;
+}
+.card:hover {
+  border: 4px solid #2b2f35;
+  transform: scale(1.02);
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card-link .card {
+  height: 100%;
+}
+.card.tatouages {
+  width: 300px;  
+  height: 350px; 
+  background-image: url('./images/tatouages.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.card.piercings {
+  width: 300px;  
+  height: 350px; 
+  background-image: url('./images/piercings.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+footer {
+  background: linear-gradient(to right, #24242c, #2b2f35);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .navbar .logo-img {
+    height: 60px;
+  }
+
+  .navbar a {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+
+  .navbar ul {
+    gap: 0.3rem;
+  }
+}
+
+
+.galerie-texte {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem 0;
+  color: white;
+}
+
+.galerie-slider {
+  width: 350px;
+  height: 500px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.texte {
+  max-width: 900px;
+  flex-grow: 1;
+}
+
+
+.galerie-texte .galerie {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+
+.galerie-texte .galerie img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  
+}
+
+.galerie-texte .texte {
+  max-width: 700px;
+}
+
+.galerie-texte .texte h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  
+}
+
+.galerie-texte .texte p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.galerie-slider {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.galerie-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.galerie-slider .slide.active {
+  opacity: 1;
+}
+
+
+
+@media (max-width: 768px) {
+  .galerie-texte {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .galerie-texte .galerie {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tattoos-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+/*CARTES TATOUAGES*/
+.tattoos-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 100px 20px;
+  background-color: #000;
+}
+.card {
+  width: 300px;
+  background-color: #2c2c2c;
+  text-align: center;
+  border: 4px solid #686868;
+  box-shadow: 0 0 10px #333;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.card h2 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/*PIERCINGS*/
+.galerie-piercings {
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+}
+.galerie-piercings h2 {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  font-weight: 900;
+  color: #eee;
+  text-shadow: 1px 1px 4px #000;
+}
+.galerie-piercings .galerie {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  padding: 0 2rem;
+}
+.galerie-piercings .galerie img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.galerie-piercings .galerie img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+/*DESSIN*/
+.galerie-dessin {
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+}
+.galerie-dessin h2 {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  font-weight: 900;
+  color: #eee;
+  text-shadow: 1px 1px 4px #000;
+}
+.galerie-dessin .galerie {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  padding: 0 2rem;
+}
+.galerie-dessin .galerie img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.galerie-dessin .galerie img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+
+/*CONTACT*/
+.contact-page {
+  padding: 40px 0;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  min-height: 400px;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-info a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #0077cc;
+}
+
+.contact-image {
+  flex: 1 1 300px;
+}
+
+.contact-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
